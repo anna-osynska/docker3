@@ -5,14 +5,13 @@ pipeline {
         stage('Build Jar') {
             steps {
                 //sh
-                bat "cd com.flight.docker"
                 bat "mvn clean package -DskipTests"
             }
         }
         stage('Build Image') {
             steps {
                 //sh
-                bat "docker build -t='anna/docker3' ."
+                bat "docker build -t=anna/docker3 ."
             }
         }
         stage('Push Image') {
