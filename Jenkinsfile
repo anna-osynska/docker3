@@ -11,7 +11,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 //sh
-                bat "docker build -t=anna/docker3 ."
+                bat "docker build -t=annasilch/docker3 ."
             }
         }
         stage('Push Image') {
@@ -19,7 +19,7 @@ pipeline {
 			    withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'pass', usernameVariable: 'user')]) {
                     //sh
 			        bat "docker login --username=${user} --password=${pass}"
-			        bat "docker push anna/docker3:latest"
+			        bat "docker push annasilch/docker3:latest"
 			    }                           
             }
         }
