@@ -5,7 +5,7 @@ pipeline {
         stage('Build Jar') {
             steps {
                 //sh
-                cd com.flight.docker
+                bat "cd com.flight.docker"
                 bat "mvn clean package -DskipTests"
             }
         }
