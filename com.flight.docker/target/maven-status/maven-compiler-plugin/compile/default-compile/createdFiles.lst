@@ -1,0 +1,6 @@
+flight\pages\FindFlightPage.class
+flight\pages\RegistrationConfirmationPage.class
+flight\pages\FlightDetailsPage.class
+flight\pages\RegistrationPage.class
+flight\pages\FlightConfirmationPage.class
+search\pages\SearchPage.class

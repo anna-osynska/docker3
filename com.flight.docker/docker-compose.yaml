@@ -1,0 +1,46 @@
+version: "3"
+services:
+  hub:
+    image: selenium/hub
+    ports:
+      - "4444:4444"
+  chrome:
+    image: selenium/node-chrome
+    shm_size: '2g' 
+    depends_on:
+      - hub
+    environment:
+      - SE_EVENT_BUS_HOST=hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+  firefox:
+    image: selenium/node-firefox
+    shm_size: '2g' 
+    depends_on:
+      - hub
+    environment:
+      - SE_EVENT_BUS_HOST=hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+  search-module:
+    image: anna/docker3
+    depends_on:
+      - firefox
+      - chrome
+    environment:
+      - HUB_HOST=hub
+      - MODULE=search-module.xml
+      - BROWSER=firefox
+    volumes:
+      - ./test-output:/usr/share/test-output
+  flight-module:
+    image: anna/docker3
+    depends_on:
+      - firefox
+      - chrome
+    environment:
+      - HUB_HOST=hub
+      - MODULE=testng.xml
+      - BROWSER=firefox
+    volumes:
+      - ./test-output2:/usr/share/test-output

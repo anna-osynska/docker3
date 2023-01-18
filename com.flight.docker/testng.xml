@@ -1,0 +1,9 @@
+<suite name="suite">
+    <test name="test">
+        <parameter name="numPassengers" value="2"/>
+        <parameter name="expectedPrice" value="$1169 USD"/>
+        <classes>
+            <class name="BookFlightTest"/>
+        </classes>
+    </test>
+</suite>

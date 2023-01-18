@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-01-16T04:53:37 GMT" name="suite" finished-at="2023-01-16T04:54:05 GMT" duration-ms="28979">
+    <groups>
+    </groups>
+    <test started-at="2023-01-16T04:53:37 GMT" name="test" finished-at="2023-01-16T04:54:05 GMT" duration-ms="28979">
+      <class name="BookFlightTest">
+        <test-method is-config="true" signature="setUpDriver()[pri:0, instance:BookFlightTest@77e9807f]" started-at="2023-01-16T04:53:37 GMT" name="setUpDriver" finished-at="2023-01-16T04:53:56 GMT" duration-ms="19568" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriver -->
+        <test-method is-config="true" signature="setParam(java.lang.String,java.lang.String)[pri:0, instance:BookFlightTest@77e9807f]" started-at="2023-01-16T04:53:56 GMT" name="setParam" finished-at="2023-01-16T04:53:56 GMT" depends-on-methods="BaseTest.setUpDriver" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$1169 USD]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setParam -->
+        <test-method signature="registrationPageTest()[pri:0, instance:BookFlightTest@77e9807f]" started-at="2023-01-16T04:53:56 GMT" name="registrationPageTest" finished-at="2023-01-16T04:54:01 GMT" duration-ms="5085" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrationPageTest -->
+        <test-method signature="registrationConfirmationTest()[pri:0, instance:BookFlightTest@77e9807f]" started-at="2023-01-16T04:54:01 GMT" name="registrationConfirmationTest" finished-at="2023-01-16T04:54:01 GMT" depends-on-methods="BookFlightTest.registrationPageTest" duration-ms="300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrationConfirmationTest -->
+        <test-method signature="flightDetailsTest()[pri:0, instance:BookFlightTest@77e9807f]" started-at="2023-01-16T04:54:01 GMT" name="flightDetailsTest" finished-at="2023-01-16T04:54:04 GMT" depends-on-methods="BookFlightTest.registrationConfirmationTest" duration-ms="2037" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightDetailsTest -->
+        <test-method signature="findFlightTest()[pri:0, instance:BookFlightTest@77e9807f]" started-at="2023-01-16T04:54:04 GMT" name="findFlightTest" finished-at="2023-01-16T04:54:04 GMT" depends-on-methods="BookFlightTest.flightDetailsTest" duration-ms="837" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findFlightTest -->
+        <test-method signature="flightConfirmationPage()[pri:0, instance:BookFlightTest@77e9807f]" started-at="2023-01-16T04:54:04 GMT" name="flightConfirmationPage" finished-at="2023-01-16T04:54:05 GMT" depends-on-methods="BookFlightTest.findFlightTest" duration-ms="403" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightConfirmationPage -->
+        <test-method is-config="true" signature="quit()[pri:0, instance:BookFlightTest@77e9807f]" started-at="2023-01-16T04:54:05 GMT" name="quit" finished-at="2023-01-16T04:54:05 GMT" duration-ms="704" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- BookFlightTest -->
+    </test> <!-- test -->
+  </suite> <!-- suite -->
+</testng-results>

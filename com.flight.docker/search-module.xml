@@ -1,0 +1,20 @@
+<suite name="search suite" parallel="tests">
+    <test name="search test">
+        <parameter name="keyword" value="Java"/>
+        <classes>
+            <class name="SearchTest" />
+        </classes>
+    </test>
+    <test name="search test 1">
+        <parameter name="keyword" value="test"/>
+        <classes>
+            <class name="SearchTest" />
+        </classes>
+    </test>
+    <test name="search test 2">
+        <parameter name="keyword" value="qa"/>
+        <classes>
+            <class name="SearchTest" />
+        </classes>
+    </test>
+</suite>
